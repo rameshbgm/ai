@@ -45,13 +45,6 @@ services:
       - ollama_data:/root/.ollama
     networks:
       - n8n-ollama-network
-    command: >
-      sh -c "
-        ollama pull deepseek-r1:1.5b &&
-        ollama pull gemma3:4b &&
-        ollama pull llama3.1:8b &&
-        ollama pull deepseek-coder-v2:16b &&
-        ollama serve"
     restart: unless-stopped
 
 networks:
